@@ -674,21 +674,14 @@ imap <m-k> <up>
 " Alt  + L            光标右移一格
 imap <m-l> <right>
 
-" \c                  复制至公共剪贴板
-"imap <leader>c <esc>"+y
-nmap <leader>c "+y
-"vmap <leader>c "+y
+" \y                  复制至公共剪贴板
+nmap <leader>y "+y
 
 " \a                  复制所有至公共剪贴板
 nmap <leader>a <esc>ggVG"+y<esc>
 
-" \v                  从公共剪贴板粘贴
-" imap <leader>v <esc>"+p
-" nmap <leader>v "+p
-" vmap <leader>v "+p
-imap <leader>p <esc>"+p
+" \p                  从公共剪贴板粘贴
 nmap <leader>p "+p
-vmap <leader>p "+p
 
 " \bb                 按=号对齐代码 [Tabular插件]
 nmap <leader>bb :Tab /=<cr>
@@ -1003,3 +996,6 @@ nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+"YCM C++
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
